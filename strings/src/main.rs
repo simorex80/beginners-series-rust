@@ -3,7 +3,7 @@ fn main() {
     let upper = text.to_uppercase();
     let stripped = upper.strip_prefix("HELLO\n").unwrap();
 
-    println!("{}", first_line(&stripped))
+    println!("{}", first_line(stripped))
 }
 
 // pub fn first_line(string: String) -> String {

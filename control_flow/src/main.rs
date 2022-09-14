@@ -8,10 +8,11 @@ fn main() {
 
     let formal = true;
     let greeting = if formal {
-        println!("Good evening");
+        "Good evening"
     } else {
-        println!("Hey, friend");
+        "Hey, friend"
     };
+    println!("{}", greeting);
 
     let number = 6;
 

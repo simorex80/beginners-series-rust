@@ -8,8 +8,8 @@ fn main() {
     });
 
     assert!(
-        &students[0]
-            == &Student {
+        students[0]
+            == Student {
                 name: String::from("Ryan")
             }
     );

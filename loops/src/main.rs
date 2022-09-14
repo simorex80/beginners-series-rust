@@ -13,7 +13,7 @@ fn main() {
 
     while counter < 10 {
         println!("hello");
-        counter = counter + 1;
+        counter += 1;
     }
 
     for item in 0..5 {
