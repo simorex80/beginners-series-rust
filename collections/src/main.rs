@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     let mut students = vec![Student {
         name: String::from("Ryan"),
@@ -24,8 +26,6 @@ fn main() {
     for student in students.iter() {
         println!("Student name: {}", student.name);
     }
-
-    use std::collections::HashMap;
 
     let mut enrollment = HashMap::new();
     enrollment.insert(String::from("biology"), students);
