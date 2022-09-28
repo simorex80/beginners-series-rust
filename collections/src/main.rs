@@ -1,5 +1,10 @@
 use std::collections::HashMap;
 
+#[derive(PartialEq, Eq, Debug)]
+struct Student {
+    name: String,
+}
+
 fn main() {
     let mut students = vec![Student {
         name: String::from("Ryan"),
@@ -30,11 +35,6 @@ fn main() {
     let mut enrollment = HashMap::new();
     enrollment.insert(String::from("biology"), students);
 
-    let bio_students = enrollment.get("biology");
-    let bio_students = enrollment.remove("biology");
-}
-
-#[derive(PartialEq, Eq)]
-struct Student {
-    name: String,
+    let bio_students = enrollment.get("biology").unwrap();
+    let bio_students = enrollment.remove("biology").unwrap();
 }

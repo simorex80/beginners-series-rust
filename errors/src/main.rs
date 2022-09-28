@@ -1,4 +1,4 @@
-use std::fs::File;
+use std::{fs::File, io::Error};
 
 fn main() {
     //panic!("Farewell");
@@ -26,5 +26,18 @@ fn main() {
     
     //let f = File::open("hello.txt").unwrap();
     
-    let f = File::open("hello.txt").expect("Failed to open hello.txt");
+    // let f = File::open("hello.txt").expect("Failed to open hello.txt");
+
+    let file_found = match open("hello.txt".to_string()) {
+        Ok(file) => Some(file),
+        Err(err) => {
+            println!("Error opening file {}", err);
+            None
+        },
+    };
+}
+
+fn open(path: String) -> Result<File, Error> {
+    let f = File::open(path)?;
+    Ok(f)
 }

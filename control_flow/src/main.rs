@@ -24,6 +24,22 @@ fn main() {
         println!("number is not divisible by 4 or 3");
     }
 
+    let result = match number {
+        1 => {
+            "One"
+        },
+        i if i > 1 => {
+            "More then one"
+        },
+        i if i < 1 => {
+            "Less then one"
+        },
+        _ => {
+            "Other"
+        }
+    };
+    println!("{}", result);
+
     let boolean = true;
 
     let binary = match boolean {

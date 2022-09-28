@@ -1,5 +1,6 @@
 fn main() {
-    last_char(String::from("Hello"));
+    let string = String::from("Hello");
+    println!("Last char of {} is {}", string.clone(), last_char(string));
 }
 
 fn last_char(string: String) -> char {

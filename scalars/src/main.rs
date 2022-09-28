@@ -5,6 +5,10 @@ fn main() {
     let x = 2.0;
     let y: f32 = 3.0;
 
+    let e: i32 = 1;
+    let f: i64 = 1;
+    let z = e as i64 + f;
+
     let sum = a + b;
 
     let difference = x - 1.0;

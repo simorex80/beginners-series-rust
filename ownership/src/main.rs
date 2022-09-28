@@ -8,6 +8,11 @@ fn main() {
     // This line will return an error
     // println!("{}", say); 
 
-    println!("{}", say2);
+    print(say2);
 
+}
+
+fn print(out: String) {
+    println!("{}", out);
+    // HERE say2 is DESTROYED AND FREEDED
 }

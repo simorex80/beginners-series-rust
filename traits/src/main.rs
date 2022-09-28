@@ -36,18 +36,22 @@ fn main() {
         name: String::from("Nell")
     };
 
-    person.eat_dinner();
-
     let cat = Cat {
         name: String::from("Marvin")
     };
-
-    cat.eat_dinner();
 
     let rabbit = Rabbit {
         name: String::from("Leia")
     };
 
-    rabbit.eat_dinner();
+    do_eat(&person);
 
+    do_eat(&cat);
+
+    do_eat(&rabbit);
+
+}
+
+fn do_eat(animal_that_eat: &dyn Eat) {
+    animal_that_eat.eat_dinner();
 }
